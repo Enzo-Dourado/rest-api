@@ -1,0 +1,218 @@
+/* --- Paletas de Cores como Variáveis --- */
+
+/* Tema Padrão (Claro) */
+:root {
+    --primary-color: #007bff; /* Azul primário */
+    --secondary-color: #28a745; /* Verde para sucesso */
+    --secondary-color-hover: #218838;
+    --bg-color: #f4f7f9; /* Fundo geral */
+    --container-bg-color: #ffffff; /* Fundo do container principal */
+    --text-color: #333333;
+    --label-color: #555555;
+    --border-color: #dee2e6;
+    --input-bg-color: #ffffff;
+    --tab-bg-color: #e9ecef;
+    --tab-text-color: var(--primary-color);
+    --shadow-color: rgba(0, 0, 0, 0.08);
+}
+
+
+/* Reset Básico e Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: var(--container-bg-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    border: 1px solid var(--border-color);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.theme-selector {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+.theme-selector button {
+    padding: 10px 10px;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#theme-default {
+    background-color: #007bff;
+}
+
+#theme-dark {
+    background-color: #121212;
+}
+
+#theme-high-contrast {
+    background-color: #ffff00;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+/* Botões de Navegação (Abas) */
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.tab-button {
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+    background-color: var(--tab-bg-color);
+    color: var(--tab-text-color);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+    opacity: 0.8;
+}
+
+.tab-button.active {
+    background-color: var(--primary-color);
+    color: var(--container-bg-color); /* Cor de fundo para texto contrastante */
+    border-color: var(--primary-color);
+}
+/* Específico para contraste */
+.high-contrast-theme .tab-button.active {
+    color: #000;
+}
+.high-contrast-theme .tab-button {
+    color: #ffff00
+}
+
+
+/* Estilo dos Formulários */
+.form-container { display: none; }
+.form-container.active { display: block; }
+
+form h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+fieldset {
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+legend {
+    color: var(--label-color);
+    font-weight: 500;
+    padding: 0 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    flex: 1 1 calc(50% - 20px);
+}
+.form-group.large { flex: 1 1 calc(65% - 20px); }
+.form-group.small { flex: 1 1 calc(35% - 20px); }
+
+label {
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: var(--label-color);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    background-color: var(--input-bg-color);
+    color: var(--text-color);
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+.high-contrast-theme input:focus, .high-contrast-theme select:focus {
+    box-shadow: 0 0 0 3px var(--secondary-color);
+}
+
+.btn-submit {
+    align-self: flex-end;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--bg-color);
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn-submit:hover {
+    background-color: var(--secondary-color-hover);
+}
+.high-contrast-theme .btn-submit {
+    color: #000;
+    border: 2px solid var(--primary-color);
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+    .container { margin: 20px; padding: 15px; }
+    .form-group, .form-group.large, .form-group.small { flex: 1 1 100%; }
+}
+@media (max-width: 480px) {
+    .tab-buttons { flex-direction: column; }
+    .theme-selector { flex-direction: column; align-items: stretch; }
+    .theme-selector button { text-align: center; }
+    .btn-submit { width: 100%; text-align: center; margin-top: 10px; }
+    body, input, select, .tab-button, .btn-submit { font-size: 14px; }
+}

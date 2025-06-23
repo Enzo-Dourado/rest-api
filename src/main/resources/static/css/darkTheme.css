@@ -1,0 +1,14 @@
+body.dark-theme {
+    --primary-color: #4dabf7; /* Azul mais claro */
+    --secondary-color: #40c057; /* Verde mais claro */
+    --secondary-color-hover: #37b24d;
+    --bg-color: #121212;
+    --container-bg-color: #1e1e1e;
+    --text-color: #e0e0e0;
+    --label-color: #adb5bd;
+    --border-color: #444444;
+    --input-bg-color: #2c2c2c;
+    --tab-bg-color: #343a40;
+    --tab-text-color: var(--primary-color);
+    --shadow-color: rgba(0, 0, 0, 0.4);
+}

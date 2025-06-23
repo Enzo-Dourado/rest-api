@@ -1,0 +1,14 @@
+body.high-contrast-theme {
+    --primary-color: #ffff00; /* Amarelo vivo */
+    --secondary-color: #ff00ff; /* Magenta */
+    --secondary-color-hover: #8d048d;
+    --bg-color: #000000;
+    --container-bg-color: #000000;
+    --text-color: #ffffff;
+    --label-color: #ffffff;
+    --border-color: #ffff00; /* Amarelo */
+    --input-bg-color: #000000;
+    --tab-bg-color: #000000;
+    --tab-text-color: #000000;
+    --shadow-color: rgba(255, 255, 0, 0.5);
+}
