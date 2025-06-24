@@ -26,7 +26,8 @@ Este projeto consiste em um sistema web completo de **cadastro de pacientes e m�
 - [x] Estrutura com Spring Boot 
 - [x] Criação de modelos 
 - [x] Criação de DTOs para entrada de dados 
-- [x] Mapeamento JPA com validações 
+- [x] Mapeamento JPA com validações
+- [x] Aquitetura MVC (Model-View-Controller)
 - [x] Endpoints REST:
   - `POST /pacientes` – cadastro de pacientes
   - `POST /medicos` – cadastro de médicos
