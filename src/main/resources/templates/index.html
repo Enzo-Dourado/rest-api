@@ -27,8 +27,8 @@
             <button id="btn-medico" class="tab-button">Cadastrar Médico</button>
         </div>
 
-        <div id="form-paciente" class="form-container active">
-            <form action="/cadastrar-paciente" method="POST">
+        <div id= "formulario-paciente" class="form-container active">
+            <form id="form-paciente" action="/cadastrar-paciente" method="POST">
                 <h2>Dados do Paciente</h2>
                 
                 <fieldset>
@@ -91,8 +91,8 @@
             </form>
         </div>
 
-        <div id="form-medico" class="form-container">
-            <form action="/cadastrar-medico" method="POST">
+        <div id= "formulario-medico" class="form-container">
+            <form id="form-medico" action="/cadastrar-medico" method="POST">
                 <h2>Dados do Médico</h2>
 
                 <fieldset>
@@ -117,8 +117,6 @@
                             <option value="DERMATOLOGIA">Dermatologia</option>
                             <option value="GINECOLOGIA">Ginecologia</option>
                             <option value="ORTOPEDIA">Ortopedia</option>
-                            <option value="PEDIATRIA">Pediatria</option>
-                            <option value="CLINICA_GERAL">Clínica Geral</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -169,7 +167,8 @@
 
     </div>
 
-    <script src="..\static\js\script.js"></script>
+    <script src="..\static\js\paciente.js"></script>
+    <script src="..\static\js\medico.js"></script>
 
 </body>
 </html>
