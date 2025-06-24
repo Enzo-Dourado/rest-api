@@ -7,7 +7,7 @@ Este projeto consiste em um sistema web completo de **cadastro de pacientes e m�
 ## 🚀 Tecnologias Utilizadas
 
 - **Java**
-- **Spring Boot 3+**
+- **Spring Boot 3.5.3**
   - Spring Web
   - Spring Data JPA
   - Validação com Bean Validation
