@@ -44,4 +44,7 @@ Este projeto consiste em um sistema web completo de **cadastro de pacientes e m√
 
 ---
 
+### Site
+- link: https://enzo-dourado.github.io/rest-api/src/main/resources/templates/
+
 
