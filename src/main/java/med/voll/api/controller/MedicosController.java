@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -45,5 +46,10 @@ public class MedicosController {
     public void atualizacaoMedico(@RequestBody @Valid DadosAtualizacaoMedico attMedico) {
         var medico = repository.getReferenceById(attMedico.id());
         medico.atualizarInformacoes(attMedico);
+    }
+
+    @DeleteMapping
+    public void excluirMedico() {
+        
     }
 }

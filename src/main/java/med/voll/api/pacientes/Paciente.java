@@ -34,11 +34,24 @@ public class Paciente {
     private ClassEndereco endereco;
 
     public Paciente(DadosPaciente dadosPaciente) {
+        this.id = dadosPaciente.id();
         this.nome = dadosPaciente.nome();
         this.email = dadosPaciente.email();
         this.telefone = dadosPaciente.telefone();
         this.cpf = dadosPaciente.cpf();
         this.endereco = new ClassEndereco(dadosPaciente.endereco());
+    }
+
+    public void atualizarInformacoes(DadosAtualizacaoPaciente attPaciente) {
+        if (attPaciente.nome() != null) {
+            this.nome = attPaciente.nome();
+        }
+        if (attPaciente.telefone() != null) {
+            this.telefone = attPaciente.telefone();
+        }
+        if (attPaciente.endereco() != null) {
+            this.endereco.atualizarInformacoes(attPaciente.endereco());
+        }
     }
 
 }
