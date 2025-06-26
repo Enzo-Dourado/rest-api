@@ -38,6 +38,8 @@ public class Medico {
     
     @Embedded
     private ClassEndereco endereco;
+
+    private boolean ativo;
     
     public Medico(DadosMedicos dadosMedicos) {
         this.nome = dadosMedicos.nome();
@@ -46,6 +48,7 @@ public class Medico {
         this.crm = dadosMedicos.crm();
         this.especialidade = dadosMedicos.especialidade();
         this.endereco = new ClassEndereco(dadosMedicos.endereco());
+        this.ativo = true;
     }
 
     public void atualizarInformacoes(DadosAtualizacaoMedico attMedico) {
@@ -58,5 +61,8 @@ public class Medico {
         if (attMedico.endereco() != null) {
             this.endereco.atualizarInformacoes(attMedico.endereco());
         }
+    }
+    public void excluir() {
+        this.ativo = false;
     }
 }

@@ -46,8 +46,9 @@ public class PacientesController {
         pacientes.atualizarInformacoes(attPaciente);
     }
 
-    @DeleteMapping
-    public void excluirPaciente() {
-
-    }
+//     @DeleteMapping("/{id}")
+// @Transactional
+//     public void excluirPaciente(Long id) {
+//         repository.deleteById(id);
+//     }
 }
