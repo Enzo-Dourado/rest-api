@@ -33,6 +33,8 @@ public class Paciente {
     @Embedded
     private ClassEndereco endereco;
 
+    private boolean ativo;
+
     public Paciente(DadosPaciente dadosPaciente) {
         this.id = dadosPaciente.id();
         this.nome = dadosPaciente.nome();
@@ -40,6 +42,7 @@ public class Paciente {
         this.telefone = dadosPaciente.telefone();
         this.cpf = dadosPaciente.cpf();
         this.endereco = new ClassEndereco(dadosPaciente.endereco());
+        this.ativo = true;
     }
 
     public void atualizarInformacoes(DadosAtualizacaoPaciente attPaciente) {
@@ -52,6 +55,10 @@ public class Paciente {
         if (attPaciente.endereco() != null) {
             this.endereco.atualizarInformacoes(attPaciente.endereco());
         }
+    }
+
+    public void excluir() {
+        this.ativo = false;
     }
 
 }
